@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+Flask
+Flask-Session
+python-dotenv
+requests
+psutil
