@@ -207,6 +207,13 @@ os.makedirs(IROTECH_DIR, exist_ok=True)
 # Initialize bot
 bot = telebot.TeleBot(TOKEN)
 
+# --- REMOVE WEBHOOK ON STARTUP ---
+try:
+    bot.remove_webhook()
+    print("✅ Webhook removed successfully!")
+except Exception as e:
+    print(f"ℹ️ No webhook to remove: {e}")
+
 # --- Data structures ---
 bot_scripts = {}
 user_subscriptions = {}
